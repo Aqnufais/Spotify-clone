@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    
+}
+
+.login{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.login > img {
+    width: auto;
+    height: 200px;
+}
+
+
+
+.login > a {
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 99px;
+    font-weight: 600;
+    color: white;
+    font-family: "Raleway", serif;
+    background-color: #1DB954;
+}
