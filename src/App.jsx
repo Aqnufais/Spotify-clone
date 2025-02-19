@@ -1,14 +1,26 @@
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Login from './Login'
+import { getTokenFromUrl } from './Spotify'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [token, setToken] = useState();
+  useEffect(() => {
+    const hash = getTokenFromUrl();
+    window.location.hash =  "";
+    const _token = hash.access_token;
+
+    if(_token){
+      setToken(_token)
+    }
+    console.log("token", _token);
+    
+  },[])
 
   return (
     <>
       <div className="App">
-        <Login />
+        {token ? <h1>Logged in</h1> : <Login />}
       </div>
     </>
   )
