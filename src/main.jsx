@@ -1,15 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { DataLayer } from './DataLayer.jsx'
-import reducer,{initialState} from './Reducer.jsx'
+import React from "react";
+import App from "./App";
+import { DataLayer } from "./DataLayer.jsx";
+import reducer, {initialState} from "./Reducer.jsx";
+import { createRoot } from 'react-dom/client';
 
-reactDOM.render(
+const root = createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <DataLayer initialState={initialState} reducer={reducer}>
-      <App />
+      <App/>
     </DataLayer>
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+  </React.StrictMode>
+);
