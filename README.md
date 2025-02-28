@@ -1,3 +1,3 @@
-#Spotify_clone
+#spotif-clone
 
 
